@@ -2,7 +2,7 @@
 	"name": "PWA-Songnotes-01",
 	"short_name": "Songnotes",
 	"description": "Demo aplikacija na predmetu Napredni razvoj za web",
-	"display": "fullscreen",
+	"display": "standalone",
 	"theme_color": "#ffd369",
 	"background_color": "#393e46",
 	"start_url": "/index.html",

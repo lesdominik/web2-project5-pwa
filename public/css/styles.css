@@ -39,7 +39,44 @@ nav {
 
 main {
 	margin-top: 130px;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
+}
+
+/* modal */
+.modal .modal-dialog .modal-content {
+	max-height: 80%;
+	color: var(--dark-grey);
+	border-radius: 25px;
+}
+
+.modal-text-decorated {
+	color: var(--yellow);
+}
+
+.modal-body {
+	margin: auto 20px;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: center;
+}
+
+.submit-btn {
+	align-self: center;
+	border: none;
+	border-radius: 30px;
+	height: 3em;
+	width: 8em;
+	font-weight: bold;
+	background-color: var(--yellow);
+	color: var(--dark-grey);
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+	background-color: #cfab57 !important;
+	color: var(--dark-grey) !important;
 }
 
 @media (max-width: 767.98px) {
@@ -57,6 +94,11 @@ main {
 
 	main {
 		margin-top: 100px;
+	}
+
+	.modal-content {
+		max-height: 100% !important;
+		height: 100%;
 	}
 }
 
@@ -101,41 +143,4 @@ footer .add-btn {
 	background-color: var(--grey);
 	translate: 30px;
 	border-radius: 100%;
-}
-
-/* modal */
-.modal-content {
-	max-height: 80% !important;
-	color: var(--dark-grey);
-	border-radius: 25px;
-}
-
-.modal-text-decorated {
-	color: var(--yellow);
-}
-
-.modal-body {
-	margin: auto 20px;
-}
-
-.modal-footer {
-	display: flex;
-	justify-content: center;
-}
-
-.submit-btn {
-	align-self: center;
-	border: none;
-	border-radius: 30px;
-	height: 3em;
-	width: 8em;
-	font-weight: bold;
-	background-color: var(--yellow);
-	color: var(--dark-grey);
-}
-
-.submit-btn:hover,
-.submit-btn:active {
-	background-color: #cfab57 !important;
-	color: var(--dark-grey) !important;
 }
