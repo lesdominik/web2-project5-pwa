@@ -42,6 +42,20 @@ main {
 	padding-bottom: 15px;
 }
 
+.about-link {
+	text-align: end;
+	margin-top: 30px;
+}
+
+.about-link a {
+	text-decoration: none;
+	color: var(--yellow);
+}
+
+.about-link a:hover {
+	color: #cfab57;
+}
+
 /* modal */
 .modal .modal-dialog .modal-content {
 	max-height: 80%;
@@ -125,6 +139,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	translate: 0 100px;
 }
 
 footer .add-btn i {
@@ -134,13 +149,26 @@ footer .add-btn i {
 }
 
 footer .add-btn {
-	translate: -25px;
+	translate: -25px -100px;
 }
 
 .plus-background {
 	width: 50px;
 	height: 40px;
 	background-color: var(--grey);
-	translate: 30px;
+	translate: 30px -100px;
 	border-radius: 100%;
+}
+
+/* /about */
+.logo-yellow {
+	color: var(--yellow);
+}
+
+.container div {
+	text-align: center;
+}
+
+.container div h2 {
+	margin-bottom: 30px;
 }
