@@ -5,9 +5,17 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "/public")));
 
+app.get("/home", (req, res) => {
+	res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+
+app.get("/about", (req, res) => {
+	res.sendFile(path.join(__dirname, "/public/about.html"));
+});
+
 app.use((req, res) => {
 	res.status(404);
-	res.send("<h1>Error 404: Resource not found</h1>");
+	res.sendFile(path.join(__dirname, "/public/404.html"));
 });
 
 app.listen(3000, () => {
