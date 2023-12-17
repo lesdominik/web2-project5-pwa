@@ -36,9 +36,10 @@
 			"sizes": "152x152"
 		},
 		{
-			"src": "/img/icons/songnotes-icon-192x192.png",
+			"src": "/img/icons/maskable_icon_x192.png",
 			"type": "image/png",
-			"sizes": "192x192"
+			"sizes": "192x192",
+			"purpose": "maskable"
 		},
 		{
 			"src": "/img/icons/songnotes-icon-384x384.png",
