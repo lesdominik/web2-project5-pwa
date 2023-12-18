@@ -4,6 +4,7 @@ const filesToCache = [
 	"/",
 	"/index.html",
 	"/offline.html",
+	"/404.html",
 	"manifest.json",
 	"js/app.js",
 	"css/styles.css",
@@ -24,6 +25,17 @@ const filesToCache = [
 	"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css",
 	"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",
 ];
+
+// cache size limit
+const limitCacheSize = (name, size) => {
+	caches.open(name).then((cache) => {
+		cache.keys().then((keys) => {
+			if (keys.length > size) {
+				cache.delete(keys[0]).then(limitCacheSize(name, size));
+			}
+		});
+	});
+};
 
 // install service worker
 self.addEventListener("install", (event) => {
@@ -68,6 +80,7 @@ self.addEventListener("fetch", (event) => {
 					fetch(event.request).then((fetchRes) => {
 						return caches.open(dynamicCacheName).then((cache) => {
 							cache.put(event.request.url, fetchRes.clone());
+							limitCacheSize(dynamicCacheName, 10);
 							return fetchRes;
 						});
 					})
